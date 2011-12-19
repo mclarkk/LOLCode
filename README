@@ -1,0 +1,5 @@
+python.py: Fire up ye olde Python REPL and type from python import python!
+
+textAdventure.py: A proof of concept. I wanted to see if you could substitute loops and if-else statements with nothing but try-except blocks. And can you!
+
+textAdventure2.py: The same program, but this time all the identitifiers have been replaced by various numbers of underscores! Is that beauty I see reflected in thine tears?
