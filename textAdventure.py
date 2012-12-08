@@ -29,10 +29,9 @@ def gameRound():
 	except ValueError:
 		try:
 			1/(booleans[os.name in osNames[1]])
+			print '\n' * 100
 		except ZeroDivisionError:
 			os.system('CLS')
-		else:
-			print '\n' * 100
 
 	#begin game
 	print startMessage
@@ -40,10 +39,9 @@ def gameRound():
 
 	try:
 		cardinalDirections[input.lower()]
+		direction = input.lower()
 	except KeyError:
 		direction = tryDirectionAgain()
-	else:
-		direction = input.lower()
 
 	try:
 		1/cardinalDirections[direction]
@@ -69,10 +67,9 @@ def gameRound():
 	
 	try:
 		booleans[input.lower()]
+		repeat = input.lower()
 	except KeyError:
 		repeat = tryRepeatAgain()
-	else:
-		repeat = input.lower()
 
 	try:
 		1/(booleans[repeat]-1)
