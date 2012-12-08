@@ -8,6 +8,7 @@ _ = {"north":0, "south":1, "east":2, "west":3}
 __ = {"n":0, False: 0, "y":1, True: 1}
 ___ = ["posix", ("nt", "dos", "ce")]
 ____ = None
+denied = "Sorry, you can't go that way. Try again: "
 
 def main():
 	______________()
@@ -20,30 +21,33 @@ def ______________():
 	_________ = "\nDeath by tsunami! A peaceful calm washes over you. So do the waves."
 	__________ = ""
 	___________ = ""
+	prompt = "I go (North/South/East/West): "
+	clear1 = 'clear'
+	clear2 = 'CLS'
+	repeat = "\nPlay again? (y/n): "
+	two_options = "Please type 'y' or 'n': "
 
 	#clear screen
 	try:
 		1/___.index(____________.name)
 	except ZeroDivisionError:
-		____________.system('clear')
+		____________.system(clear1)
 	except ValueError:
 		try:
 			1/(__[____________.name in ___[1]])
-		except ZeroDivisionError:
-			____________.system('CLS')
-		else:
 			print '\n' * 100
+		except ZeroDivisionError:
+			____________.system(clear2)
 
 	#begin game
 	print _____
-	_____________ = raw_input("I go (North/South/East/West): ")
+	_____________ = raw_input(prompt)
 
 	try:
 		_[_____________.lower()]
+		__________ = _____________.lower()
 	except KeyError:
 		__________ = _______________()
-	else:
-		__________ = _____________.lower()
 
 	try:
 		1/_[__________]
@@ -65,14 +69,13 @@ def ______________():
 	except ZeroDivisionError:
 		print _________
 
-	_____________ = raw_input("\nPlay again? (y/n): ")
+	_____________ = raw_input(repeat)
 	
 	try:
 		__[_____________.lower()]
+		___________ = _____________.lower()
 	except KeyError:
 		___________ = ________________()
-	else:
-		___________ = _____________.lower()
 
 	try:
 		1/(__[___________]-1)
@@ -81,7 +84,7 @@ def ______________():
 
 #recurses until it gets valid _____________
 def _______________():
-	_____________ = raw_input("Sorry, you can't go that way. Try again: ")
+	_____________ = raw_input(denied)
 	try:
 		_[_____________.lower()]
 		return _____________.lower()
@@ -90,7 +93,7 @@ def _______________():
 
 #recurses until it gets valid _____________
 def ________________():
-	_____________ = raw_input("Please type 'y' or 'n': ")
+	_____________ = raw_input(two_options)
 	try:
 		__[_____________.lower()]
 		return _____________.lower()
