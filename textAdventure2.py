@@ -8,7 +8,7 @@ _ = {"north":0, "south":1, "east":2, "west":3}
 __ = {"n":0, False: 0, "y":1, True: 1}
 ___ = ["posix", ("nt", "dos", "ce")]
 ____ = None
-denied = "Sorry, you can't go that way. Try again: "
+_________________ = "Sorry, you can't go that way. Try again: "
 
 def main():
 	______________()
@@ -21,27 +21,27 @@ def ______________():
 	_________ = "\nDeath by tsunami! A peaceful calm washes over you. So do the waves."
 	__________ = ""
 	___________ = ""
-	prompt = "I go (North/South/East/West): "
-	clear1 = 'clear'
-	clear2 = 'CLS'
-	repeat = "\nPlay again? (y/n): "
-	two_options = "Please type 'y' or 'n': "
+	__________________ = "I go (North/South/East/West): "
+	___________________ = 'clear'
+	____________________ = 'CLS'
+	_____________________ = "\nPlay again? (y/n): "
+	______________________ = "Please type 'y' or 'n': "
 
 	#clear screen
 	try:
 		1/___.index(____________.name)
 	except ZeroDivisionError:
-		____________.system(clear1)
+		____________.system(___________________)
 	except ValueError:
 		try:
 			1/(__[____________.name in ___[1]])
 			print '\n' * 100
 		except ZeroDivisionError:
-			____________.system(clear2)
+			____________.system(____________________)
 
 	#begin game
 	print _____
-	_____________ = raw_input(prompt)
+	_____________ = raw_input(__________________)
 
 	try:
 		_[_____________.lower()]
@@ -69,7 +69,7 @@ def ______________():
 	except ZeroDivisionError:
 		print _________
 
-	_____________ = raw_input(repeat)
+	_____________ = raw_input(_____________________)
 	
 	try:
 		__[_____________.lower()]
@@ -84,7 +84,7 @@ def ______________():
 
 #recurses until it gets valid _____________
 def _______________():
-	_____________ = raw_input(denied)
+	_____________ = raw_input(_________________)
 	try:
 		_[_____________.lower()]
 		return _____________.lower()
@@ -93,7 +93,7 @@ def _______________():
 
 #recurses until it gets valid _____________
 def ________________():
-	_____________ = raw_input(two_options)
+	_____________ = raw_input(______________________)
 	try:
 		__[_____________.lower()]
 		return _____________.lower()
